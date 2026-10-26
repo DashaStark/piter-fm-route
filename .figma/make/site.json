@@ -1,0 +1,12 @@
+{
+  "title": "Питер FM — прогулка по Санкт-Петербургу",
+  "description": "Иммерсивная прогулка по Санкт-Петербургу в атмосфере фильма «Питер FM». Слушайте город, снимайте его истории и выбирайте свой маршрут.",
+  "language": "ru",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
