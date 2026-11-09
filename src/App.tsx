@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const heroImage =
-  'https://images.unsplash.com/photo-1635194490859-221bf0173708?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=85&w=1800'
+const heroImage = `${import.meta.env.BASE_URL}start_picture.jpg`
 const archImage =
   'https://images.unsplash.com/photo-1642024265069-2006a575a519?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=85&w=1200'
 const canalImage =
@@ -26,97 +25,97 @@ const points: Point[] = [
     task: 'Пропусти один зелёный. Снимите короткий ролик замирания толпы на красный свет и ее мгновенного хаотичного движения на зеленый.',
     hint: 'В разработке',
     duration: '01:24',
-    image: publicAsset('point_1.jpg'),
+    image: publicAsset('preview/1.png'),
     imageAlt: 'Дом с башнями на площади Льва Толстого',
     frame: 'Секунда до',
   },
   {
     name: 'Силин мост',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Монументальный железобетонный мост 1936 года с тяжелыми гранитными парапетами перекинут через Карповку, а прямо у моста располагается Первый жилой дом Ленсовета — легендарный памятник ленинградского конструктивизма с плавно изогнутым фасадом.',
+    task: 'Расположитесь на Силином мосту так, чтобы в объектив попали массивный парапет и изогнутый фасад Дома Ленсовета, зафиксируйте фокус на статичной архитектуре и снимите движение прохожих или машин с помощью проводки или длинной выдержки, превратив спешащих людей в размытые тени и создав художественный эффект киношного расфокуса.',
     hint: 'В разработке',
     duration: '02:08',
-    image: publicAsset('point_2.jpg'),
+    image: publicAsset('preview/2.png'),
     imageAlt: 'Арка и отражение в Петербурге',
     frame: 'В разработке',
   },
   {
     name: 'Метро «Чкаловская»',
-    fact: 'Станция «Чкаловская» спроектирована как посвящение авиации: её наземный вестибюль с лестницей напоминает трап, светильники внутри стилизованы под пропеллеры, а напольная разметка зала имитирует взлётно-посадочную полосу, задавая ощущение разгона ещё до посадки в вагон.',
-    task: 'Найди в толпе один яркий цветовой акцент. Лучше всего красный: куртка, шарф, зонт, сумка. Если красного нет, выбери любой самый яркий цвет. Сделай кадр так, чтобы акцент остался главным, а остальные люди стали фоном.',
+    fact: 'Наземный вестибюль станции (1997 г.) спроектирован в форме элементов фюзеляжа самолёта в честь перелёта Валерия Чкалова, а внутри сохранена строгая индустриальная эстетика: светильники на эскалаторах стилизованы под пропеллеры, а разметка пола отсылает к взлётной полосе.',
+    task: 'Встаньте у наземного вестибюля со стороны ступеней и бюста Чкалова, выждите момент и выхватите взглядом из серо-чёрного потока прохожих один яркий цветовой акцент, в идеале красный: куртку, шарф, зонт или сумку. Постройте кадр так, чтобы этот объект остался главным фокусным центром, а остальные фигуры растворились в нейтральном фоне.',
     hint: 'Не гонись за красным пятном. Найди место, где оно появится само, и подожди.',
     duration: '01:37',
-    image: publicAsset('point_3.jpg'),
+    image: publicAsset('preview/3.png'),
     imageAlt: 'Мост над петербургским каналом',
     frame: 'Красная шапочка',
   },
   {
     name: 'Дом Бенуа',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Сказочный и грандиозный комплекс с башнями-эркерами, лабиринтами и внутренними дворами облицован редким шведским камнем и напоминает огромный каменный черновик, созданный тремя архитекторами семьи Бенуа.',
+    task: 'Перейдите на противоположную сторону Каменноостровского проспекта, найдите ракурс, где арка двора или ветви деревьев образуют естественную рамку для башен, и снимите плавный панорамный видеопроезд без резких движений, медленно ведя камеру вдоль ограды или отходя назад.',
     hint: 'В разработке',
     duration: '01:52',
-    image: publicAsset('point_4.jpg'),
+    image: publicAsset('preview/4.png'),
     imageAlt: 'Человек проходит под аркой',
     frame: 'В разработке',
   },
   {
     name: 'Доходный дом Лидваль',
-    fact: 'Доходный дом Лидваля на Малой Посадской строился в четыре этапа по проекту архитектора Фёдора Лидваля (получившего за него городской приз в 1907 году) как ансамбль разновысотных корпусов из фактурного грубого камня и гладкой плитки, где на стенах среди стилизованных ветвей и растений спрятаны барельефы животных и птиц — совы, зайца, рыси, мухомора и паука в паутине.',
-    task: 'Представь, что ты снимаешь документальный портрет, а героем стал дом. Найди на фасаде деталь, которая выдает его характер. Сними её крупным планом.',
+    fact: 'Памятник северного модерна Фёдора Лидваля образует парадный двор-курдонер за кованой решёткой, а его фасад превращается в живой лес с барельефами сов, зайцев, рыси, мухоморов и огромного паука в паутине.',
+    task: 'Сначала отойдите за кованую ограду со стороны Малой Посадской и сделайте общий кадр парадного двора в образе застывшего сказочного замка, а затем подойдите вплотную к зданию, отыщите скрытую декоративную деталь и снимите её крупным планом, отсекая всё лишнее вокруг.',
     hint: 'Дом хитрый, зверей на нём не сразу видно. Если не нашёл, отойди на несколько шагов и посмотри еще раз.',
     duration: '02:16',
-    image: publicAsset('point_5.jpg'),
+    image: publicAsset('preview/5.png'),
     imageAlt: 'Городская панорама у воды',
     frame: 'Каменный лес',
   },
   {
     name: 'Метро «Горьковская»',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Район пропитан кинематографической эстетикой благодаря соседству со старейшей киностудией «Ленфильм», чьи неоклассические фасады с колоннами скрывают лабиринт съёмочных павильонов и дворов напротив Александровского парка.',
+    task: 'Отыщите у вестибюля метро или в парке выразительную деталь на переднем плане: афишную тумбу, ствол дерева, край стены или собственную ладонь. Замрите и снимите короткое видео, где проходящие вдали люди пересекают кадр, а передний план образует размытую фактурную раму.',
     hint: 'В разработке',
     duration: '01:45',
-    image: publicAsset('point_6.jpg'),
+    image: publicAsset('preview/6.png'),
     imageAlt: 'Архитектура у канала',
     frame: 'В разработке',
   },
   {
     name: 'Биржевой мост',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Стальной пятипролётный мост 1960 года с розовым гранитом и трезубцами Нептуна на решётках проектировался как младший брат Дворцового моста для симметрии Стрелки, а его разводной механизм при открытии сначала сдвигает крылья в стороны на 15 сантиметров.',
+    task: 'Встаньте на пешеходной части Биржевого моста у центрального пролёта, прижмите смартфон к гранитному парапету для неподвижности и запишите 10-секундное вертикальное видео, направив объектив на течение Малой Невы и оставив городской шум за спиной.',
     hint: 'В разработке',
     duration: '01:31',
-    image: publicAsset('point_7.jpg'),
+    image: publicAsset('preview/7.png'),
     imageAlt: 'Петербургская набережная',
     frame: 'В разработке',
   },
   {
     name: 'Нижний лебяжий мост',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Каменный мост 1837 года инженера П. П. Базена при перестройке в 1920-х годах сохранил оригинальную чугунную решётку 1835 года с круглыми розетками, веерными пальметтами и столбиками с шарами над узкой Лебяжьей канавкой.',
+    task: 'Выйдите на середину гранитного моста у впадения канавки в Мойку, уберите телефон на пару минут для созерцания и сделайте один кадр без дублей вдоль воды. Затем включите сетку смартфона и скомпонуйте статичный кадр, где берега канавки сходятся в одну точку перспективы.',
     hint: 'В разработке',
     duration: '02:03',
-    image: publicAsset('point_8.png'),
+    image: publicAsset('preview/8.png'),
     imageAlt: 'Каменная архитектура арки',
     frame: 'В разработке',
   },
   {
     name: '2-й Инженерный мост',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Мост 1826 года с золочёными торшерами из пучков копий полтора века стоит над сушей из-за засыпанного канала, а в доходном доме напротив, доме Безобразовых, фасад XIX века скрывает встроенные стены здания XVIII века.',
+    task: 'Найдите ракурс, в котором в одном кадре соединятся золочёный торшер, гранит моста и старый фасад напротив. Зафиксируйте телефон и снимите короткое наблюдение за прохожими, чтобы новая жизнь города прошла поверх слоёв его истории.',
     hint: 'В разработке',
     duration: '01:58',
-    image: publicAsset('point_9.jpg'),
+    image: publicAsset('preview/9.png'),
     imageAlt: 'Старый мост над водой',
     frame: 'В разработке',
   },
   {
     name: 'Мост Белинского',
-    fact: 'В разработке',
-    task: 'В разработке',
+    fact: 'Это единственный мост через Фонтанку, сохранивший исходные очертания пролётов XVIII века, когда у него были гранитные башни. Он выводит к угловому дому Фокина, где в дореволюционные годы шили гвардейские офицерские фуражки по индивидуальной мерке.',
+    task: 'Отодвиньтесь подальше по набережной, зафиксируйте телефон, включите оптический зум от 3x и выстройте композицию из трёх слоёв: фонаря на переднем плане, моста с движением в центре и дома Фокина сзади. Запишите 10-секундное стационарное видео с эффектом сжатия перспективы.',
     hint: 'В разработке',
     duration: '01:49',
-    image: publicAsset('point_10.jpg'),
+    image: publicAsset('preview/10.png'),
     imageAlt: 'Архитектура Петербурга с необычного ракурса',
     frame: 'В разработке',
   },
@@ -126,7 +125,7 @@ const points: Point[] = [
     task: 'Выбери витрину или окно кафе и сними кадр, в котором наслаиваются две картинки: то, что за стеклом, и отражение города за твоей спиной. Либо ты можешь зайти в кафе за чашкой кофе и снять зеркальный вид прямо оттуда.',
     hint: 'Встань под углом относительно стекла — так отражение будет сильнее. Самостоятельно выбери и настрой фокус: что ты хочешь поставить на первое место — отражение или то, что скрывается за стеклом.',
     duration: '01:36',
-    image: publicAsset('point_11.jpg'),
+    image: publicAsset('preview/11.png'),
     imageAlt: 'Спокойная вода петербургского канала',
     frame: 'Зазеркалье',
   },
@@ -136,7 +135,7 @@ const points: Point[] = [
     task: 'Встань на углу тротуара, ближе к дороге и сними каждую из пяти улиц коротким роликом по 3–5 секунд. Постарайся передать свои ощущения и настроение улиц, которые ты чувствуешь. Выбери одну дорогу, по которой пойдешь дальше и сними на ней финальный кадр, какой захочешь. Правил и подсказок больше нет.',
     hint: 'Правил и подсказок больше нет.',
     duration: '02:27',
-    image: publicAsset('point_12.png'),
+    image: publicAsset('preview/12.png'),
     imageAlt: 'Панорама города в кинематографическом свете',
     frame: 'Направо пойдешь…',
   },
@@ -238,42 +237,166 @@ function RouteMap({ unlocked }: { unlocked: number }) {
   )
 }
 
+function formatAudioTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '00:00'
+  const minutes = Math.floor(seconds / 60)
+  const remainingSeconds = Math.floor(seconds % 60)
+  return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`
+}
+
+function AudioTrack({ file, fallbackDuration, onEnded }: { file: string; fallbackDuration: string; onEnded?: () => void }) {
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [playing, setPlaying] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
+
+  const togglePlayback = async () => {
+    const audio = audioRef.current
+    if (!audio) return
+    if (audio.paused) await audio.play()
+    else audio.pause()
+  }
+
+  const seek = (value: number) => {
+    const audio = audioRef.current
+    if (!audio || !Number.isFinite(value)) return
+    audio.currentTime = value
+    setCurrentTime(value)
+  }
+
+  const skip = (seconds: number) => {
+    const audio = audioRef.current
+    if (!audio) return
+    seek(Math.max(0, Math.min(audio.duration || 0, audio.currentTime + seconds)))
+  }
+
+  return (
+    <div className="audio-block">
+      <span className="eyebrow">Радио</span>
+      <div className="audio-controls">
+        <button
+          className="play-button"
+          type="button"
+          onClick={togglePlayback}
+          aria-label={playing ? 'Поставить аудио на паузу' : 'Включить аудио'}
+        >
+          {playing ? 'Ⅱ' : '▶'}
+        </button>
+        <div className="audio-timeline">
+          <div className="audio-time-row">
+            <span>{formatAudioTime(currentTime)}</span>
+            <span>{duration ? formatAudioTime(duration) : fallbackDuration}</span>
+          </div>
+          <input
+            className="audio-range"
+            type="range"
+            min="0"
+            max={duration || 1}
+            step="0.01"
+            value={Math.min(currentTime, duration || 1)}
+            onChange={(event) => seek(Number(event.target.value))}
+            aria-label="Перемотать аудио"
+          />
+        </div>
+        <div className="audio-skip-buttons" aria-label="Быстрая перемотка">
+          <button type="button" onClick={() => skip(-5)} aria-label="Назад на 5 секунд">-5 сек</button>
+          <button type="button" onClick={() => skip(10)} aria-label="Вперёд на 10 секунд">+10 сек</button>
+        </div>
+      </div>
+      <audio
+        ref={audioRef}
+        src={publicAsset(file)}
+        preload="metadata"
+        onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
+        onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => {
+          setPlaying(false)
+          setCurrentTime(0)
+          onEnded?.()
+        }}
+      />
+    </div>
+  )
+}
+
+const pointPhotos: Record<number, { file: string; alt: string }[]> = {
+  0: [
+    { file: 'point 1/1.jpg', alt: 'Площадь Льва Толстого, дополнительный кадр 1' },
+    { file: 'point 1/2.jpg', alt: 'Площадь Льва Толстого, дополнительный кадр 2' },
+    { file: 'point 1/3.jpg', alt: 'Площадь Льва Толстого, дополнительный кадр 3' },
+  ],
+  7: [
+    { file: 'point 8/1 (1).png', alt: 'Нижний Лебяжий мост, кадр 1' },
+    { file: 'point 8/1 (1).jpg', alt: 'Нижний Лебяжий мост, кадр 2' },
+    { file: 'point 8/1 (2).jpg', alt: 'Нижний Лебяжий мост, кадр 3' },
+    { file: 'point 8/1 (3).jpg', alt: 'Нижний Лебяжий мост, кадр 4' },
+  ],
+  8: [
+    { file: 'point 9/1 (1).png', alt: '2-й Инженерный мост, кадр 1' },
+    { file: 'point 9/1 (1).jpg', alt: '2-й Инженерный мост, кадр 2' },
+    { file: 'point 9/1 (2).jpg', alt: '2-й Инженерный мост, кадр 3' },
+    { file: 'point 9/1 (3).jpg', alt: '2-й Инженерный мост, кадр 4' },
+  ],
+  9: [
+    { file: 'point 10/1 (1).png', alt: 'Мост Белинского, кадр 1' },
+    { file: 'point 10/1 (2).png', alt: 'Мост Белинского, кадр 2' },
+  ],
+  10: [
+    { file: 'point 11/1 (1).png', alt: 'Доходный дом Иофа, кадр 1' },
+    { file: 'point 11/1 (1).jpg', alt: 'Доходный дом Иофа, кадр 2' },
+    { file: 'point 11/1 (2).jpg', alt: 'Доходный дом Иофа, кадр 3' },
+  ],
+  11: [
+    { file: 'point 12/1.jpg', alt: 'Пять углов, кадр 1' },
+    { file: 'point 12/1.jpeg', alt: 'Пять углов, кадр 2' },
+  ],
+}
+
+function PointGallery({ index }: { index: number }) {
+  const photos = pointPhotos[index]
+  if (!photos?.length) return null
+
+  return (
+    <div className="point-gallery" aria-label={`Фотографии сцены ${index + 1}`}>
+      {photos.map((photo, photoIndex) => (
+        <figure className={photoIndex === 0 ? 'point-gallery-main' : ''} key={photo.file}>
+          <img src={publicAsset(photo.file)} alt={photo.alt} />
+          <figcaption>Кадр {String(photoIndex + 1).padStart(2, '0')}</figcaption>
+        </figure>
+      ))}
+    </div>
+  )
+}
+
 function PointContent({
   point,
   index,
   complete,
   expanded,
   bridgeStage,
+  pointNineTask,
+  pointElevenStage,
   onExpand,
   onComplete,
   onBridgeComplete,
+  onPointNineAudioEnd,
+  onPointElevenComplete,
 }: {
   point: Point
   index: number
   complete: boolean
   expanded: boolean
   bridgeStage: number
+  pointNineTask: 'Задание 1' | 'Задание 2' | null
+  pointElevenStage: number
   onExpand?: () => void
   onComplete: () => void
   onBridgeComplete: () => void
+  onPointNineAudioEnd: () => void
+  onPointElevenComplete: () => void
 }) {
-  const [playing, setPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
-
-  useEffect(() => {
-    if (!playing) return
-    const timer = window.setInterval(() => {
-      setProgress((value) => {
-        if (value >= 99) {
-          setPlaying(false)
-          return 100
-        }
-        return value + 1
-      })
-    }, 500)
-    return () => window.clearInterval(timer)
-  }, [playing])
-
   return (
     <div className="point-content">
       {!expanded && (
@@ -289,33 +412,14 @@ function PointContent({
         <span className="timecode">00:{String(index * 7 + 4).padStart(2, '0')}:18</span>
       </div>
 
-      <figure className="point-image">
-        <img src={point.image} alt={point.imageAlt} />
-        <figcaption>{point.frame}</figcaption>
-        <span>REC</span>
-      </figure>
+      <PointGallery index={index} />
 
       <div className="point-grid">
-        <div className="audio-block">
-          <span className="eyebrow">Радио</span>
-          <button
-            className="audio-player"
-            type="button"
-            onClick={() => setPlaying(!playing)}
-            aria-label={playing ? 'Поставить аудио на паузу' : 'Включить аудио'}
-          >
-            <span className="play-button">{playing ? 'Ⅱ' : '▶'}</span>
-            <span className="audio-track">
-              <span className="waveform">
-                {Array.from({ length: 22 }).map((_, bar) => (
-                  <i key={bar} style={{ height: `${20 + ((bar * 17) % 70)}%` }} />
-                ))}
-              </span>
-              <span className="progress" style={{ width: `${progress}%` }} />
-            </span>
-            <span>{point.duration}</span>
-          </button>
-        </div>
+        <AudioTrack
+          file={index === 8 ? 'audio/9_1.mp3' : index === 10 ? 'audio/11_1.mp3' : `audio/${index + 1}.mp3`}
+          fallbackDuration={point.duration}
+          onEnded={index === 8 ? onPointNineAudioEnd : undefined}
+        />
 
         <div className="fact-block">
           <span className="eyebrow">Архитектура</span>
@@ -323,11 +427,17 @@ function PointContent({
         </div>
       </div>
 
-      <div className="task-block">
+      {(index !== 8 || pointNineTask) && <div className="task-block">
         <span className="task-number">{String(index + 1).padStart(2, '0')}</span>
         <div>
           <span className="eyebrow">Задание оператору</span>
-          <h3>{point.task}</h3>
+          <h3>
+            {index === 8
+              ? pointNineTask === 'Задание 1'
+                ? 'Орёл: снимите противоположный берег сквозь чугунную решётку, используя её узор как живописную раму.'
+                : 'Решка: подойдите вплотную к элементам моста и наведите резкий фокус на золочёный наконечник копий или венок, уводя противоположный берег в глубокий блюр.'
+              : point.task}
+          </h3>
         </div>
         {!complete ? (
           <button type="button" onClick={onComplete}>
@@ -337,24 +447,27 @@ function PointContent({
         ) : (
           <span className="complete-mark">Кадр снят</span>
         )}
-      </div>
+      </div>}
 
-      <aside className="hint-block">
-        <span className="eyebrow">Подсказка</span>
-        <p>{point.hint}</p>
-      </aside>
+      {index !== 0 && (
+        <aside className="hint-block">
+          <span className="eyebrow">Подсказка</span>
+          <p>{point.hint}</p>
+        </aside>
+      )}
 
       {index === 8 && bridgeStage > 0 && (
         <div className="bridge-episode">
           <div className="bridge-copy">
             <span className="eyebrow">Задание 09.2 · другой берег</span>
-            <h3>Теперь посмотрите на дом напротив</h3>
-            <p>
-              Он находится за мостом, но переходить туда не нужно. Приблизьте фасад камерой и представьте, как
-              выглядел бы обратный кадр этой сцены.
-            </p>
+            <h3>Пока гуляете, присмотритесь к окнам на противоположном берегу реки.</h3>
+            <p>Снимите одно или несколько окон с зумом: удастся ли вам увидеть в них жизнь?</p>
+            <p className="bridge-hint"><strong>Подсказка:</strong> не стоит снимать окна, если в них можно рассмотреть людей.</p>
             {bridgeStage === 1 ? (
-              <button type="button" onClick={onBridgeComplete}>Второй кадр снят <ArrowIcon /></button>
+              <>
+                <AudioTrack file="audio/9_2.mp3" fallbackDuration={point.duration} />
+                <button type="button" onClick={onBridgeComplete}>Второй кадр снят <ArrowIcon /></button>
+              </>
             ) : (
               <span className="bridge-complete">Оба кадра сняты</span>
             )}
@@ -363,6 +476,18 @@ function PointContent({
             <img src={heroImage} alt="Дом на противоположном берегу за мостом" />
             <figcaption>Снять отсюда · не переходя мост</figcaption>
           </figure>
+        </div>
+      )}
+
+      {index === 10 && pointElevenStage > 0 && (
+        <div className="bridge-episode point-eleven-episode">
+          <div className="bridge-copy">
+            <span className="eyebrow">Запись 11.2 · продолжение</span>
+            <h3>Эфир продолжается</h3>
+            <p>Послушайте вторую запись и затем продолжите маршрут.</p>
+            <AudioTrack file="audio/11_2.mp3" fallbackDuration={point.duration} />
+            <button type="button" onClick={onPointElevenComplete}>Вернуться в карусель <ArrowIcon /></button>
+          </div>
         </div>
       )}
     </div>
@@ -392,7 +517,7 @@ function PointPreview({
   return (
     <div className="point-preview" data-frame={String(index + 1).padStart(2, '0')}>
       <figure>
-        <img src={point.image} alt={point.imageAlt} />
+        <img src={publicAsset(`preview/${index + 1}.png`)} alt={point.imageAlt} />
         <div className="preview-shade" />
         <figcaption>
           <span>{point.frame}</span>
@@ -481,7 +606,7 @@ function MapModal({ nextPoint, onClose }: { nextPoint: number; onClose: () => vo
   )
 }
 
-function CoinModal({ onContinue }: { onContinue: () => void }) {
+function CoinModal({ onResult }: { onResult: (side: 'Орёл' | 'Решка') => void }) {
   const [tossing, setTossing] = useState(false)
   const [side, setSide] = useState<'Орёл' | 'Решка' | null>(null)
 
@@ -498,25 +623,22 @@ function CoinModal({ onContinue }: { onContinue: () => void }) {
     <div className="modal-backdrop coin-backdrop" role="dialog" aria-modal="true" aria-labelledby="coin-title">
       <div className="map-modal coin-modal">
         <div className="coin-copy map-modal-copy">
-          <span className="eyebrow">Сцена 01 · случайность</span>
-          <h2 id="coin-title">Кадр пойман.<br />Куда пойдем дальше?</h2>
-          <p>Орёл или решка.<br />Как часто и бывает в этом городе, пусть случай решит, как сложится наш сегодняшний маршрут.</p>
-          <div className={`coin ${tossing ? 'is-tossing' : ''} ${side ? 'has-result' : ''}`} aria-live="polite">
+          <span className="eyebrow">Сцена 09 · случайность</span>
+          <h2 id="coin-title">Кадр пойман.<br />Какое задание выбрать?</h2>
+          <p>Нажмите на монетку. Случай выберет следующий кадр.</p>
+          <button
+            className={`coin ${tossing ? 'is-tossing' : ''} ${side ? 'has-result' : ''}`}
+            type="button"
+            onClick={() => side ? onResult(side) : tossCoin()}
+            disabled={tossing}
+            aria-label={side ? 'Закрыть окно и открыть задание' : 'Бросить монетку'}
+          >
             <span className="coin-rim" aria-hidden="true" />
-            <span className="coin-face">{tossing ? '✦' : side ? (side === 'Орёл' ? 'ОРЁЛ' : 'РЕШКА') : '✦'}</span>
-          </div>
-          {side ? (
-            <>
-            <p className="coin-result">Выпал {side.toLowerCase()}. Нас ждет прогулка до Силина моста.</p>
-              <button className="coin-action" type="button" onClick={onContinue}>
-                К следующей точке <ArrowIcon />
-              </button>
-            </>
-          ) : (
-            <button className="coin-action" type="button" onClick={tossCoin} disabled={tossing}>
-              {tossing ? 'Монетка в воздухе…' : 'Бросить монетку'}
-            </button>
-          )}
+            <span className="coin-face">
+              {side ? <img src={publicAsset(side === 'Орёл' ? 'coin/heads.png' : 'coin/tails.png')} alt={side} /> : <span className="coin-placeholder">?</span>}
+            </span>
+          </button>
+          {side && <p className="coin-result">Выпала сторона: {side.toLowerCase()}</p>}
         </div>
       </div>
     </div>
@@ -585,7 +707,9 @@ export default function App() {
   const [expanded, setExpanded] = useState<number | null>(null)
   const [mapOffer, setMapOffer] = useState<number | null>(null)
   const [coinOffer, setCoinOffer] = useState(false)
+  const [pointNineTask, setPointNineTask] = useState<'Задание 1' | 'Задание 2' | null>(null)
   const [bridgeStage, setBridgeStage] = useState(0)
+  const [pointElevenStage, setPointElevenStage] = useState(0)
   const [creditsOpen, setCreditsOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [headerHidden, setHeaderHidden] = useState(false)
@@ -652,16 +776,29 @@ export default function App() {
       setBridgeStage(1)
       return
     }
+    if (index === 10 && pointElevenStage === 0) {
+      setPointElevenStage(1)
+      return
+    }
     const next = Math.min(index + 1, points.length)
     setUnlocked(next)
     setExpanded(null)
-    if (index === 0) setCoinOffer(true)
     if (next === points.length) setActive(points.length)
+  }
+
+  const openPointNineCoin = () => {
+    if (!pointNineTask) setCoinOffer(true)
   }
 
   const completeBridgeEpisode = () => {
     setBridgeStage(2)
     setUnlocked(9)
+    setExpanded(null)
+  }
+
+  const completePointEleven = () => {
+    setPointElevenStage(2)
+    setUnlocked(11)
     setExpanded(null)
   }
 
@@ -875,7 +1012,11 @@ export default function App() {
                           <PointPreview
                             point={point}
                             index={index}
-                            complete={index < unlocked || (index === 8 && bridgeStage > 0)}
+                            complete={
+                              index < unlocked ||
+                              (index === 8 && bridgeStage > 0) ||
+                              (index === 10 && pointElevenStage > 0)
+                            }
                             bridgeStage={bridgeStage}
                             onExpand={() => setExpanded(index)}
                           />
@@ -939,11 +1080,19 @@ export default function App() {
             <PointContent
               point={points[expanded]}
               index={expanded}
-              complete={expanded < unlocked || (expanded === 8 && bridgeStage > 0)}
+              complete={
+                expanded < unlocked ||
+                (expanded === 8 && bridgeStage > 0) ||
+                (expanded === 10 && pointElevenStage > 0)
+              }
               expanded
               bridgeStage={bridgeStage}
+              pointNineTask={pointNineTask}
+              pointElevenStage={pointElevenStage}
               onComplete={() => completePoint(expanded)}
               onBridgeComplete={completeBridgeEpisode}
+              onPointNineAudioEnd={openPointNineCoin}
+              onPointElevenComplete={completePointEleven}
             />
           </div>
         </div>
@@ -961,10 +1110,9 @@ export default function App() {
 
       {coinOffer && (
         <CoinModal
-          onContinue={() => {
+          onResult={(side) => {
             setCoinOffer(false)
-            setUnlocked(1)
-            setMapOffer(2)
+            setPointNineTask(side === 'Орёл' ? 'Задание 1' : 'Задание 2')
           }}
         />
       )}
