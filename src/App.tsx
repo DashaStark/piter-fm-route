@@ -156,6 +156,27 @@ const mapDots = [
   [24, 52],
 ]
 
+const panoramaUrls = [
+  'https://yandex.ru/map-widget/v1/?ll=30.312130%2C59.965561&mode=whatshere&panorama%5Bdirection%5D=40.492277%2C8.761356&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.312338%2C59.965588&panorama%5Bspan%5D=119.740552%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&whatshere%5Bpoint%5D=30.312177%2C59.965560&whatshere%5Bzoom%5D=20.2&z=20.2',
+  'https://yandex.ru/map-widget/v1/?ll=30.307766%2C59.969762&mode=whatshere&panorama%5Bdirection%5D=228.080251%2C-4.086300&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.307726%2C59.969737&panorama%5Bspan%5D=119.740552%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&whatshere%5Bpoint%5D=30.307751%2C59.969748&whatshere%5Bzoom%5D=21&z=21',
+  'https://yandex.ru/map-widget/v1/?ll=30.292753%2C59.960752&mode=whatshere&panorama%5Bdirection%5D=208.948930%2C3.156435&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.292236%2C59.961343&panorama%5Bspan%5D=119.740552%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&whatshere%5Bpoint%5D=30.292307%2C59.960901&whatshere%5Bzoom%5D=17&z=18.84',
+  'https://yandex.ru/map-widget/v1/?ll=30.314532%2C59.962846&mode=poi&panorama%5Bdirection%5D=242.521098%2C1.753125&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.314456%2C59.962801&panorama%5Bspan%5D=119.740552%2C60.000000&poi%5Bpoint%5D=30.314338%2C59.962663&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D186222822612&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&z=20',
+  'https://yandex.ru/map-widget/v1/?ll=30.320689%2C59.957116&mode=poi&panorama%5Bdirection%5D=63.875586%2C7.515263&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.319922%2C59.957068&panorama%5Bspan%5D=119.740552%2C60.000000&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&z=21',
+  'https://yandex.ru/map-widget/v1/?ll=30.318761%2C59.956708&mode=whatshere&panorama%5Bdirection%5D=292.939041%2C6.064123&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.319245%2C59.956235&panorama%5Bspan%5D=119.740552%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&whatshere%5Bpoint%5D=30.318949%2C59.956181&whatshere%5Bzoom%5D=18&z=18',
+  'https://yandex.ru/map-widget/v1/?ll=30.303585%2C59.946228&mode=poi&panorama%5Bdirection%5D=89.500000%2C10.000000&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.303295%2C59.946269&panorama%5Bspan%5D=119.740552%2C60.000000&poi%5Bpoint%5D=30.303415%2C59.946270&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D59146874768&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&z=21',
+  'https://yandex.ru/map-widget/v1/?ll=30.335883%2C59.941465&mode=poi&panorama%5Bdirection%5D=324.146017%2C7.421875&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.336035%2C59.941410&panorama%5Bspan%5D=119.740552%2C60.000000&poi%5Bpoint%5D=30.335923%2C59.941429&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D93796829732&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&z=20',
+  'https://yandex.ru/map-widget/v1/?ll=30.340127%2C59.940071&mode=whatshere&panorama%5Bdirection%5D=63.416873%2C-3.378145&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.340796%2C59.939475&panorama%5Bspan%5D=119.679012%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&whatshere%5Bpoint%5D=30.339967%2C59.940101&whatshere%5Bzoom%5D=21&z=21',
+  'https://yandex.ru/map-widget/v1/?ll=30.343185%2C59.938118&mode=poi&panorama%5Bdirection%5D=340.200000%2C10.000000&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.343215%2C59.938036&panorama%5Bspan%5D=119.679012%2C60.000000&poi%5Bpoint%5D=30.343194%2C59.938065&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D89352929596&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&z=20',
+  'https://yandex.ru/map-widget/v1/?ll=30.347924%2C59.938119&mode=poi&panorama%5Bdirection%5D=216.814359%2C10.076790&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.347941%2C59.938214&panorama%5Bspan%5D=119.679012%2C60.000000&poi%5Bpoint%5D=30.347848%2C59.938153&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1238742400&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&z=20',
+  'https://yandex.ru/map-widget/v1/?ll=30.342661%2C59.926239&mode=whatshere&panorama%5Bdirection%5D=15.456294%2C10.596103&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=30.342544%2C59.926254&panorama%5Bspan%5D=119.679012%2C60.000000&rtext=59.965624%2C30.312050~59.969763%2C30.307774~59.960960%2C30.292184~59.962260%2C30.313317~59.962490%2C30.314947~59.957216%2C30.320750~59.955957%2C30.318908~59.946288%2C30.303399~59.941479%2C30.335678~59.940154%2C30.339898~59.939915%2C30.342099~59.938058%2C30.343186~59.938085%2C30.347848~59.926227%2C30.342537&rtt=pd&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTIwNjM3MDg4ElXQoNC-0YHRgdC40Y8sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQv9C70L7RidCw0LTRjCDQm9GM0LLQsCDQotC-0LvRgdGC0L7Qs9C-IgoNFX_yQRXM3G9C~~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805918~~~ymapsbm1%3A%2F%2Forg%3Foid%3D201334604095~ymapsbm1%3A%2F%2Ftransit%2Fstop%3Fid%3Dstation__9805928~~~~~~~ymapsbm1%3A%2F%2Forg%3Foid%3D109831524344&tab=panorama&utm_source=share&whatshere%5Bpoint%5D=30.342564%2C59.926227&whatshere%5Bzoom%5D=21&z=21',
+] as const
+
+type DemoMode = 'full' | 'quick'
+
+function yandexPanoramaUrl(index: number) {
+  return panoramaUrls[index]
+}
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -449,20 +470,12 @@ function PointContent({
         )}
       </div>}
 
-      {index !== 0 && (
-        <aside className="hint-block">
-          <span className="eyebrow">Подсказка</span>
-          <p>{point.hint}</p>
-        </aside>
-      )}
-
       {index === 8 && bridgeStage > 0 && (
         <div className="bridge-episode">
           <div className="bridge-copy">
             <span className="eyebrow">Задание 09.2 · другой берег</span>
             <h3>Пока гуляете, присмотритесь к окнам на противоположном берегу реки.</h3>
             <p>Снимите одно или несколько окон с зумом: удастся ли вам увидеть в них жизнь?</p>
-            <p className="bridge-hint"><strong>Подсказка:</strong> не стоит снимать окна, если в них можно рассмотреть людей.</p>
             {bridgeStage === 1 ? (
               <>
                 <AudioTrack file="audio/9_2.mp3" fallbackDuration={point.duration} />
@@ -699,7 +712,127 @@ function CreditsModal({ name, onClose }: { name: string; onClose: () => void }) 
   )
 }
 
+function ModePicker({
+  onSelect,
+  onClose,
+  canClose,
+}: {
+  onSelect: (mode: DemoMode) => void
+  onClose?: () => void
+  canClose: boolean
+}) {
+  return (
+    <div className="mode-picker-backdrop" role="dialog" aria-modal="true" aria-labelledby="mode-picker-title">
+      <div className="mode-picker">
+        {canClose && (
+          <button className="modal-close mode-picker-close" type="button" onClick={onClose} aria-label="Закрыть выбор режима">
+            ×
+          </button>
+        )}
+        <span className="eyebrow">Питер FM · демонстрация</span>
+        <h2 id="mode-picker-title">Как показать город?</h2>
+        <p className="mode-picker-intro">Выберите формат прогулки для этого показа. Полный маршрут можно пройти позже, а быстрый прототип помогает сразу переключаться между точками.</p>
+        <div className="mode-picker-options">
+          <button type="button" className="mode-option mode-option-quick" onClick={() => onSelect('quick')}>
+            <span className="mode-option-number">01</span>
+            <span className="mode-option-copy">
+              <strong>Быстрый прототип</strong>
+              <small>Панорама точки, карточки, аудио и короткая история. Удобно показывать на телефоне.</small>
+            </span>
+            <ArrowIcon />
+          </button>
+          <button type="button" className="mode-option mode-option-full" onClick={() => onSelect('full')}>
+            <span className="mode-option-number">02</span>
+            <span className="mode-option-copy">
+              <strong>Полное погружение</strong>
+              <small>Полный интерактивный маршрут с заданиями, картой, случайностью и финальными титрами.</small>
+            </span>
+            <ArrowIcon />
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function QuickPrototype({ onChangeMode }: { onChangeMode: () => void }) {
+  const [selected, setSelected] = useState(0)
+  const point = points[selected]
+  const panoramaUrl = yandexPanoramaUrl(selected)
+  const audioFile = selected === 8 ? 'audio/9_1.mp3' : selected === 10 ? 'audio/11_1.mp3' : `audio/${selected + 1}.mp3`
+
+  return (
+    <section className="quick-prototype" aria-label="Быстрый прототип маршрута">
+      <div className="quick-header">
+        <div>
+          <span className="eyebrow">Быстрый прототип · 12 сцен</span>
+          <h1>Петербург<br /><em>в панораме.</em></h1>
+          <p>Выберите точку и повернитесь вокруг неё. Все материалы из полного маршрута уже собраны здесь.</p>
+        </div>
+        <button type="button" className="quick-mode-button" onClick={onChangeMode}>
+          Сменить режим <span>↗</span>
+        </button>
+      </div>
+
+      <div className="quick-panorama-shell">
+        <div className="quick-panorama-meta">
+          <span>Сцена {String(selected + 1).padStart(2, '0')} / 12</span>
+          <strong>{point.name}</strong>
+          <a href={yandexPanoramaUrl(selected)} target="_blank" rel="noreferrer">Открыть в Яндекс Картах ↗</a>
+        </div>
+        <iframe
+          key={panoramaUrl}
+          className="quick-panorama"
+          src={panoramaUrl}
+          title={`Панорама: ${point.name}`}
+          loading="lazy"
+          allowFullScreen
+        />
+        <div className="quick-panorama-note">Поворачивайте панораму внутри окна</div>
+      </div>
+
+      <div className="quick-cards" aria-label="Точки маршрута">
+        {points.map((item, index) => (
+          <button
+            type="button"
+            className={`quick-card ${index === selected ? 'is-selected' : ''}`}
+            key={item.name}
+            onClick={() => setSelected(index)}
+            aria-label={`Выбрать сцену ${index + 1}: ${item.name}`}
+          >
+            <img src={publicAsset(`preview/${index + 1}.png`)} alt="" />
+            <span className="quick-card-shade" />
+            <span className="quick-card-index">{String(index + 1).padStart(2, '0')}</span>
+            <span className="quick-card-name">{item.name}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="quick-content">
+        <div className="quick-content-heading">
+          <span className="eyebrow">Кадр {point.frame}</span>
+          <h2>{point.name}</h2>
+          <span className="timecode">00:{String(selected * 7 + 4).padStart(2, '0')}:18</span>
+        </div>
+        <div className="quick-content-grid">
+          <AudioTrack file={audioFile} fallbackDuration={point.duration} />
+          <div className="fact-block">
+            <span className="eyebrow">Архитектура</span>
+            <p>{point.fact}</p>
+          </div>
+        </div>
+        <div className="quick-task">
+          <span className="eyebrow">Задание оператору</span>
+          <h3>{point.task}</h3>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function App() {
+  const [mode, setMode] = useState<DemoMode | null>(null)
+  const [modePickerOpen, setModePickerOpen] = useState(true)
   const [started, setStarted] = useState(false)
   const [userName, setUserName] = useState('')
   const [unlocked, setUnlocked] = useState(0)
@@ -720,10 +853,11 @@ export default function App() {
   const wheelLocked = useRef(false)
 
   useEffect(() => {
-    const modalOpen = expanded !== null || mapOffer !== null || coinOffer || creditsOpen
+    const modalOpen = modePickerOpen || expanded !== null || mapOffer !== null || coinOffer || creditsOpen
     document.body.style.overflow = modalOpen ? 'hidden' : ''
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        setModePickerOpen(false)
         setExpanded(null)
         setMapOffer(null)
         setCoinOffer(false)
@@ -735,7 +869,7 @@ export default function App() {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', closeOnEscape)
     }
-  }, [expanded, mapOffer, coinOffer, creditsOpen])
+  }, [modePickerOpen, expanded, mapOffer, coinOffer, creditsOpen])
 
   useEffect(() => {
     const updateWidth = () => {
@@ -846,9 +980,12 @@ export default function App() {
           <span>Питер<br />в кадре</span>
         </a>
         <div className="header-meta">Иммерсивная прогулка · 12+</div>
-        <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? 'Закрыть' : 'О прогулке'}
-        </button>
+        <div className="header-actions">
+          {mode && <button className="mode-button" type="button" onClick={() => setModePickerOpen(true)}>Режим: {mode === 'quick' ? 'быстрый' : 'полный'}</button>}
+          <button className="menu-button" type="button" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? 'Закрыть' : 'О прогулке'}
+          </button>
+        </div>
       </header>
 
       {menuOpen && (
@@ -860,6 +997,10 @@ export default function App() {
         </aside>
       )}
 
+      {mode === 'quick' ? (
+        <QuickPrototype onChangeMode={() => setModePickerOpen(true)} />
+      ) : (
+      <>
       <section className="hero" aria-label="Питер в кадре — иммерсивная прогулка">
         <img className="hero-bg" src={heroImage} alt="Петербургская набережная в мягком вечернем свете" />
         <div className="film-grain" aria-hidden="true" />
@@ -1118,6 +1259,20 @@ export default function App() {
       )}
 
       {creditsOpen && <CreditsModal name={userName.trim()} onClose={() => setCreditsOpen(false)} />}
+      </>
+      )}
+
+      {modePickerOpen && (
+        <ModePicker
+          canClose={mode !== null}
+          onClose={() => setModePickerOpen(false)}
+          onSelect={(nextMode) => {
+            setMode(nextMode)
+            setModePickerOpen(false)
+            if (nextMode === 'quick') setStarted(false)
+          }}
+        />
+      )}
     </main>
   )
 }
